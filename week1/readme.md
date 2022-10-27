@@ -22,3 +22,24 @@ to make a linefeed, use two spaces at the end of the line.
 
 1. item 1
 2. item 2
+
+## Terminal or shell
+
+```shell
+> none -v
+```
+
+formatting to show shell commands. 
+
+## Javascript
+
+```js
+const number=12;
+if(number>10){console.log('greater')};
+```
+
+Install the Markdown PDF converter extension to convert to PDF! eg the one by yzane.
+
+see also: markdownguide.org
+
+
