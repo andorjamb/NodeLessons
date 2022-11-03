@@ -12,3 +12,7 @@ get all the cars that match the given key-value pair.
 
 ## **getAllCars()**
 returns an array of all car objects, or an empty array 
+
+
+### Example
+```js

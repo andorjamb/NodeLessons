@@ -29,5 +29,9 @@ function createHtmlPage(cars){
         htmlString += `<h2>${car.model}: ${car.licence}`
 
     }
-    return htmlString;
+    htmlString+=`</tbody>
+    </table>`  
 }
+htmlString+=`</body>
+    </html>`
+return htmlString;
