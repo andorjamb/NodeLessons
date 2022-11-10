@@ -20,7 +20,7 @@ const server = http.createServer((req,res)=>{
     const route = decodeURIComponent(pathname);
 
     if(route===('/')){
-
+sendFile(res, homePath);
     }
     else if (route.startsWith('/styles')){
 sendFile(res, path.join(_dirname, route), 'text/css')
