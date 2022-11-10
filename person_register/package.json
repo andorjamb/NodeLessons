@@ -1,7 +1,7 @@
 {
   "name": "person_register",
   "version": "1.0.0",
-  "description": "",
+  "description": "a file fetching node server",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
