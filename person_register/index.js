@@ -1,4 +1,4 @@
-'use stict';
+'use strict';
 
 const http = require('http');
 const path = require('path');
@@ -9,7 +9,7 @@ const { search } = require('./storage/personsDataLayer');
 const port = process.env.PORT || 3000;
 const host = process.env.HOST || 'localhost';
 
-const homePath = path.join(_dirname, 'home.html');
+const homePath = path.join(__dirname, 'home.html');
 
 const server = http.createServer((req,res)=>{
     const {
@@ -17,16 +17,16 @@ const server = http.createServer((req,res)=>{
         searchParams
     } = new URL(`http://${req.headers.host}${req.url}`);
 
-    const route = decodeURIComponent(pathname);
+   let route = decodeURIComponent(pathname);
 
     if(route===('/')){
 sendFile(res, homePath);
     }
     else if (route.startsWith('/styles')){
-sendFile(res, path.join(_dirname, route), 'text/css')
+sendFile(res, path.join(__dirname, route), 'text/css')
     }
     else if (route.startsWith('/js/')){
-        sendFile(res, path.join(_dirname), route, 'text/javascript');
+        sendFile(res, path.join(__dirname), route, 'text/javascript');
 
     }
     else {
@@ -48,4 +48,4 @@ sendFile(res, path.join(_dirname, route), 'text/css')
     }
 })
 
-server.listen(port, host, ()=>console.log('server is listening on port ${port}'));
+server.listen(port, host, ()=>console.log(`server is listening on port ${port}`));

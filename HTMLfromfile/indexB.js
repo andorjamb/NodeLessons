@@ -7,7 +7,7 @@ const fs = require('fs');
 
 const { port, host, basedirectory } = require('./config.json');
 
-const homePath=path.join(_dirname,'home.html');
+const homePath=path.join(__dirname,'home.html');
 
 const server = http.createServer(async (req,res)=>{
     try{

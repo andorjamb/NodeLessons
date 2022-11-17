@@ -1,5 +1,14 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
 h1 {
     color: green;
+}
+
+.main-box {
+    width: 700px;
+    margin: auto;
 }
 
 .hidden {
@@ -8,15 +17,12 @@ h1 {
 
 label {
     font-weight: bold;
-}
-
-main {
-    display: grid;
-    justify-items: center;
+    width: 100px;
 }
 
 section {
     margin-top: 1rem;
     padding: 1rem;
-    
+    margin: auto;
+    width: 700px;
 }

@@ -6,7 +6,7 @@ const fs = require('fs');
 
 
 const { port, host } = require('./config.json');
-const homePath=path.join(_dirname,'home.html');
+const homePath=path.join(__dirname,'home.html');
 const pageAPath = path.join(__dirname, 'pageA.html');
 
 const server = http.createServer(async (req,res)=>{
@@ -21,7 +21,7 @@ const server = http.createServer(async (req,res)=>{
 
         }
         else if (route.startsWith('/styles')){
-            sendFile(res, path.join(_dirname, route), 'text/css');
+            sendFile(res, path.join(__dirname, route), 'text/css');
 
         }
         else {

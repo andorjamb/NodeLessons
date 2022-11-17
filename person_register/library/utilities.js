@@ -15,4 +15,5 @@ catch(err){
     res.end(err.message);
 }}
 
-module.export={ sendFile }
+module.exports={ sendFile }
+
