@@ -1,7 +1,12 @@
 ### Public API
 
-
-
+#### dataStorageLayer.js
+-   getAll()
+    -   returns an array of all employees / []
+-   getOne()
+    -   returns an employee object / NOT_FOUND
+-   insert(newEmployee)
+    -   returns INSERT_OK / NOT_INSERTED
 
         - returns an array of status codes
 

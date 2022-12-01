@@ -29,8 +29,8 @@ async function writeStorage(storageFile, data){
     }
 }
 
-writeStorage('.test.json', {a:1,b:'text'}).then(console.log).catch(console.log);
 //for testing:
 //readStorage('./employee.json').then(console.log).catch();
+//writeStorage('.test.json', {a:1,b:'text'}).then(console.log).catch(console.log);
 
 module.exports={ readStorage, writeStorage }
