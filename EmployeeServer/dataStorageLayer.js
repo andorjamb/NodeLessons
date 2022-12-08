@@ -58,6 +58,12 @@ insert (employee){
     });
 } //end of insert
 
+update(employee){
+    return new Promise(async(resolve,reject)=>{
+        
+    })
+}
+
 remove(id){
     return new Promise(async(resolve, reject)=>{
         if(!id){

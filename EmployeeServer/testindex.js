@@ -30,5 +30,6 @@ try {
         "department": "ict",
         "salary": 4000
     
-    })
+    });
+    catch(){};
 }
