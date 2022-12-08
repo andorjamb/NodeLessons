@@ -1,0 +1,51 @@
+[
+    {
+        "number": 7,
+        "name": "Puma",
+        "breed": "longtail",
+        "weightKg": 5,
+        "yearOfBirth": 1995
+    },
+    {
+        "number": 1,
+        "name": "Lion II",
+        "breed": "alley cat",
+        "weightKg": 6,
+        "yearOfBirth": 2017
+    },
+    {
+        "number": 6,
+        "name": "Fluffy",
+        "breed": "domesticus",
+        "weightKg": 3,
+        "yearOfBirth": 1990
+    },
+    {
+        "number": 4,
+        "name": "Hairball",
+        "breed": "gigantus",
+        "weightKg": 4,
+        "yearOfBirth": 2005
+    },
+    {
+        "number": 5,
+        "name": "Fatzo",
+        "breed": "yellowbreed",
+        "weightKg": 15,
+        "yearOfBirth": 2018
+    },
+    {
+        "number": 3,
+        "name": "Zebra",
+        "breed": "sillycat",
+        "weightKg": 7,
+        "yearOfBirth": 2015
+    },
+    {
+        "number": 2,
+        "name": "Cute",
+        "breed": "couchPurrer",
+        "weightKg": 10,
+        "yearOfBirth": 2012
+    }
+]
