@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All cats</title>
+</head>
+<body>
+    <main>
+        <h1>All Cats Page</h1>
+        <section class="table-container">
+            <table>
+                <thead>
+                    <tr><th>Cat id</th>
+                        <th>Cat name</th>
+                        <th>Breed</th>
+                        <th>Weight (kg)</th>
+                        <th>Year of birth</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+
+            </table>
+        </section>
+            <tbody>
+                <% result.forEach(person => { %>
+                    <tr>
+                        <td><%= person.id %></td>
+                        <td><%= person.firstname %></td>
+                        <td><%= person.lastname %></td>
+                        <td><%= person.department %></td>
+                        <td><%= person.salary %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+        <a href="/"><button>Menu</button></a>
+    </main>
+    
+</body>
+</html>
