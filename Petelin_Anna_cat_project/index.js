@@ -9,19 +9,27 @@ const app = express();
 app.set('view engine', 'ejs');
 
 
-app.get('/', (res,req)=>{
-    res.sendFile(path.join(__dirname, 'menu.html', (error)=>{
-        if(err) {console.log(error)}
-        else {console.log('page sent')}
+app.get('/', (res, req) => {
+    res.sendFile(path.join(__dirname, 'menu.html', (error) => {
+        if (err) { console.log(error) }
+        else { console.log('page sent') }
 
     }))
 })
 
-app.get('/allCats', (res,req)=> {
-    
+app.get('/allCats', (res, req) => {
+
+})
+
+app.get('/', (res, req) => {
+    res.sendFile(path.join(__dirname, 'menu.html', (error) => {
+        if (err) { console.log(error) }
+        else { console.log('page sent') }
+
+    }))
 })
 
 
-app.listen(port, host,()=>{
+app.listen(port, host, () => {
     console.log(`server is listening on port ${port} on ${host} `)
 });
