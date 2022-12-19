@@ -12,5 +12,12 @@
         "lastname": "River",
         "department": "ict",
         "salary": 4000
+    },
+    {
+        "id": 45,
+        "firstname": "Snowgrass",
+        "lastname": "Frost",
+        "department": "Recreation",
+        "salary": 4000
     }
 ]

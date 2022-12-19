@@ -1,5 +1,194 @@
 @import url('https://fonts.googleapis.com/css2?family=Laila&display=swap');
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Laila';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(134, 80, 40, 0.5);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    min-height: 10vh;
+}
+
+h1 {
+    font-size: 4rem;
+    color: rgb(28, 16, 8);
+}
+
+main {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    background-color: rgb(180, 125, 102);
+    border-radius: 30px;
+    padding: 0.5rem;
+
+}
+
+.vertical-flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-container {
+    display: flex;
+    border: 3px solid orange;
+    justify-content: center;
+    align-items: center;
+
+}
+
+tr {
+    display: block;
+}
+
+.menu {
+    flex: 1;
+    height: 100%;
+    border-radius: 30px;
+    margin-right: 0.5rem;
+    align-items: center;
+
+}
+
+button {
+    border-radius: 20px;
+    height: 40px;
+    width: 160px;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+}
+
+
+button.menu-button {
+    font-size: 1.2rem;
+}
+
+button.menu-button:hover {
+    background-color: rgba(134, 80, 40, 0.5);
+
+}
+
+button.submit {
+    background-color: plum;
+    height: 60px;
+}
+
+button.submit:hover {
+    border: solid 3px rgb(111, 36, 111);
+}
+
+button.home-button {
+    color: white;
+    height: 60px;
+    border: none;
+    background-color: rgb(28, 16, 8);
+}
+
+button.home-button:hover {
+    border: solid 3px white;
+}
+
+
+.cat-img-container {
+    flex: 1;
+    height: 100%;
+    margin-left: 0.5rem;
+
+}
+
+.cat-img-container img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 30px;
+
+}
+
+
+li {
+    list-style-type: none;
+    margin: 0.5rem;
+}
+
+
+.table-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+table {
+    width: 60vw;
+    border-radius: 30px;
+    background-color: white;
+    padding: 1rem;
+}
+
+tr {
+    text-align: left;
+}
+
+td {
+    padding: 0.3rem;
+}
+
+th {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+label {
+    font-size: 1.2rem;
+    flex: 50%;
+    text-align: left;
+    line-height: 40px;
+    margin-right: 1rem;
+    display: inline-block;
+    width: 200px;
+
+
+}
+
+input {
+    border-radius: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.2rem;
+    flex: 50%;
+    height: 40px;
+    border: none;
+    margin-right: 1rem;
+    margin: 0.5rem;
+
+}
+
+form {
+    display: flex;
+    align-items: baseline;
+    height: 50vh;
+    width: 60vw;
+}
+
+footer {
+    min-height: 10vh;
+    width: 100vw;
+    background-color: rgb(28, 16, 8);
+    margin-top: 1rem;
 }

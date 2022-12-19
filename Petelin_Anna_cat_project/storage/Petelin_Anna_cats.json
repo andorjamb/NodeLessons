@@ -47,5 +47,19 @@
         "breed": "couchPurrer",
         "weightKg": 10,
         "yearOfBirth": 2012
+    },
+    {
+        "number": 9,
+        "name": "Fleabag",
+        "breed": "scrofulus",
+        "weightKg": 2,
+        "yearOfBirth": 2020
+    },
+    {
+        "number": 10,
+        "name": "Nibbles",
+        "breed": "raptor",
+        "weightKg": 3,
+        "yearOfBirth": 1996
     }
 ]

@@ -9,20 +9,20 @@ Cat number is a unique identifier.
 
 ```json
 [
-    {
-        "id":1,
-        "firstname":"Leila",
-        "lastname":"Hökki",
-        "department":"ict",
-        "salary":4000
+   {
+        "number": 7,
+        "name": "Puma",
+        "breed": "longtail",
+        "weightKg": 5,
+        "yearOfBirth": 1995
     },
     {
-        "id":2,
-        "firstname":"Matt",
-        "lastname":"River",
-        "department":"ict",
-        "salary":4000
-    }
+        "number": 1,
+        "name": "Lion II",
+        "breed": "alley cat",
+        "weightKg": 6,
+        "yearOfBirth": 2017
+    },
 ]
 ```
 

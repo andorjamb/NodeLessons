@@ -6,20 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anna Petelin Cat Project</title>
-    <link rel="stylesheet" href="/styles/menu.css">
+    <link rel="stylesheet" href="/styles/pages.css">
 </head>
 
 <body>
-    <main>
+    <header>
         <h1>Cats</h1>
-        <h2>Main Menu</h2>
-        <a href="/allCats"><button>Get all cats</button></a>
-        <a href="/getCat"><button>Get one cat</button></a>
-        <a href="/addCat"><button>Add a new cat</button></a>
-        <a href="/updateCat"><button>Update a cat</button></a>
-        <a href="/removeCat"><button>Remove a cat</button></a>
-        <div class="cat-img"></div> </main>
-            <footer></footer>
+    </header>
+    <main>
+
+        <div class="menu vertical-flex-container">
+            <h2>Main Menu</h2>
+            <ul>
+                <li><a href="/allCats"><button class="menu-button">Get all cats</button></a>
+                </li>
+                <li> <a href="/getCat"><button class="menu-button">Get one cat</button></a></li>
+
+                <li> <a href="/addCat"><button class="menu-button">Add a new cat</button></a></li>
+                <li> <a href="/updateCat"><button class="menu-button">Update a cat</button></a></li>
+                <li>
+                    <a href="/removeCat"><button class="menu-button">Remove a cat</button></a>
+                </li>
+            </ul>
+        </div>
+        <div class="cat-img-container"><img src="https://source.unsplash.com/400x500/?cat"></div>
+    </main>
+    <footer></footer>
 </body>
 
 </html>

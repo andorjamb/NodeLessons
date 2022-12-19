@@ -19,7 +19,7 @@ const MESSAGES = {
         code: CODES.PROGRAM_ERROR,
         type: 'error'
     }),
-    CAT_NOT_FOUND: () => ({
+    CAT_NOT_FOUND: (number) => ({
         message: `Cat number ${number}  not found`,
         code: CODES.CAT_NOT_FOUND,
         type: 'error'
@@ -29,32 +29,32 @@ const MESSAGES = {
         code: CODES.CAT_NOT_INSERTED,
         type: 'error'
     }),
-    CAT_NOT_UPDATED: () => ({
+    CAT_NOT_UPDATED: (number) => ({
         message: `Cat number ${number} was not updated`,
         code: CODES.CAT_NOT_UPDATED,
         type: 'error'
     }),
-    CAT_NOT_REMOVED: () => ({
+    CAT_NOT_REMOVED: (number) => ({
         message: `Cat number ${number} was not removed`,
         code: CODES.CAT_NOT_REMOVED,
         type: 'error'
     }),
-    ALREADY_IN_USE: () => ({
+    ALREADY_IN_USE: (number) => ({
         message: `Cat number ${number} is already in use`,
         code: CODES.ALREADY_IN_USE,
         type: 'error'
     }),
-    CAT_INSERTED: () => ({
+    CAT_INSERTED: (number) => ({
         message: `Cat number ${number} successfully inserted`,
         code: CODES.CAT_INSERTED,
         type: 'info'
     }),
-    CAT_UPDATED: () => ({
+    CAT_UPDATED: (number) => ({
         message: `Cat number ${number} uccessfully updated`,
         code: CODES.CAT_UPDATED,
         type: 'info'
     }),
-    CAT_REMOVED: () => ({
+    CAT_REMOVED: (number) => ({
         message: `Cat number ${number} successfully removed`,
         code: CODES.CAT_REMOVED,
         type: 'info'

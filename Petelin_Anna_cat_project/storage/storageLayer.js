@@ -24,11 +24,11 @@ async function addCatToStorage(newCat) {
     return await writeStorage(storageFilePath, storageData)
 }
 
-async function updateCatStorage(modifiedCat) {
+async function updateCatStorage(updatedCat) {
     const storageData = await readStorage(storageFilePath);
-    const oldCat = storageData.find(item => item[key] == modifiedCat[key]);
+    const oldCat = storageData.find(item => item[key] == updatedCat[key]);
     if (oldCat) {
-        Object.assign(oldCat, adapter(modifiedCat));
+        Object.assign(oldCat, adapter(updatedCat));
         return await writeStorage(storageFilePath, storageData);
     }
     return false;

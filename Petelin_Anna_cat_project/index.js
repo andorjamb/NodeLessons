@@ -31,12 +31,13 @@ app.get('/allCats', (req, res) => {
 
 app.get('/getCat', (req, res) => {
     res.render('getCat', {
-        title: 'Get',
-        header1: 'Get',
+        title: 'Get Cat',
+        header1: 'GetCat',
         action: '/getCat'
 
     })
 })
+
 app.post('/getCat', (req, res) => {
     if (!req.body) return res.sendStatus(500);
 
@@ -47,22 +48,22 @@ app.post('/getCat', (req, res) => {
 
 });
 
-app.get('/newCatForm', (req, res) =>
+app.get('/addCat', (req, res) =>
     res.render('form', {
         title: 'Add Cat',
         header1: 'Add a new cat',
-        action: '/newCatForm',
+        action: '/inputCat',
         number: { value: '', readonly: '' },
-        catname: { value: '', readonly: '' },
+        name: { value: '', readonly: '' },
         breed: { value: '', readonly: '' },
-        weight: { value: '', readonly: '' },
+        weightKg: { value: '', readonly: '' },
         yearOfBirth: { value: '', readonly: '' }
     }));
 
-app.post('/newCatForm', (req, res) => {
+app.post('/inputCat', (req, res) => {
     if (!req.body) return res.statusCode(500);
 
-    dataStorage.insert(req.body)
+    dataStorage.addCat(req.body)
         .then(status => sendStatusPage(res, status))
         .catch(error => sendErrorPage(res, error))
 });
@@ -71,54 +72,54 @@ app.get('/updateCat', (req, res) =>
     res.render('form', {
         title: 'Update Cat',
         header1: 'Update Cat Data',
-        action: '/updateCat',
+        action: '/update',
         number: { value: '', readonly: '' },
-        catname: { value: '', readonly: 'readonly' },
+        name: { value: '', readonly: 'readonly' },
         breed: { value: '', readonly: 'readonly' },
-        weight: { value: '', readonly: 'readonly' },
+        weightKg: { value: '', readonly: 'readonly' },
         yearOfBirth: { value: '', readonly: 'readonly' }
     }));
 
-app.post('/updateCat', (req, res) => {
+app.post('/update', (req, res) => {
     if (!req.body) return res.sendStatus(500);
 
-    dataStorage.getOne(req.body.id)
-        .then(employee =>
+    dataStorage.getOneCat(req.body.number)
+        .then(cat =>
             res.render('form', {
-                title: 'Update Person',
-                header1: 'Update Person data',
-                action: '/update',
-                id: { value: employee.id, readonly: 'readonly' },
-                firstname: { value: employee.firstname, readonly: '' },
-                lastname: { value: employee.lastname, readonly: '' },
-                department: { value: employee.department, readonly: '' },
-                salary: { value: employee.salary, readonly: '' }
+                title: 'Update Cat',
+                header1: 'Update Cat Data',
+                action: '/updateCat',
+                number: { value: cat.number, readonly: 'readonly' },
+                name: { value: cat.name, readonly: '' },
+                breed: { value: cat.breed, readonly: '' },
+                weighKg: { value: cat.weightKg, readonly: '' },
+                yearOfBirth: { value: cat.yearOfBirth, readonly: '' }
             })
         )
         .catch(error => sendErrorPage(res, error));
 });
 
-app.post('/update', (req, res) => {
+app.post('/updateCat', (req, res) => {
     if (!req.body) return res.statusCode(500);
 
-    dataStorage.update(req.body)
+    dataStorage.updateCat(req.body)
         .then(status => sendStatusPage(res, status))
         .catch(error => sendErrorPage(res, error))
 });
 
-app.get('/removePerson', (req, res) =>
-    res.render('getPerson', {
-        title: 'Remove',
-        header1: 'remove',
-        action: '/removePerson'
+app.get('/removeCat', (req, res) =>
+    res.render('getCat', {
+        title: 'Remove Cat',
+        header1: 'Remove Cat',
+        action: '/removeCat'
     })
 );
 
-app.post('/removePerson', (req, res) => {
+app.post('/removeCat', (req, res) => {
     if (!req.body) return res.sendStatus(500);
 
-    const personId = req.body.id;
-    dataStorage.remove(personId)
+    const catNumber = req.body.number;
+    dataStorage.remove(catNumber)
         .then(status => sendStatusPage(res, status))
         .catch(error => sendErrorPage(res, error));
 
