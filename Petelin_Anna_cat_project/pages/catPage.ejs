@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Query result</title>
+    <link rel="stylesheet" href="/styles/pages.css">
+</head>
+
+<body>
+    <main>
+        <h1>Cat Data</h1>
+        <p><span class="legend">Cat number:</span><span>
+                <%= result.number %>
+            </span></p>
+        <p>Name: <%= result.catname %>
+                <%= result.breed %>
+        </p>
+        <p>Weight (kg): <%= result.weight%>
+        </p>
+        <p>Year of birth: <%= result.yearOfBirth %> €</p>
+        <a href="/"><button>Main Menu</button></a>
+    </main>
+</body>
+
+</html>

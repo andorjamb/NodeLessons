@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All cats</title>
+    <link rel="stylesheet" href="/styles/pages.css">
 </head>
+
 <body>
     <main>
         <h1>All Cats Page</h1>
         <section class="table-container">
             <table>
                 <thead>
-                    <tr><th>Cat id</th>
+                    <tr>
+                        <th>Cat id</th>
                         <th>Cat name</th>
                         <th>Breed</th>
                         <th>Weight (kg)</th>
@@ -23,20 +27,31 @@
 
             </table>
         </section>
-            <tbody>
-                <% result.forEach(person => { %>
-                    <tr>
-                        <td><%= person.id %></td>
-                        <td><%= person.firstname %></td>
-                        <td><%= person.lastname %></td>
-                        <td><%= person.department %></td>
-                        <td><%= person.salary %></td>
-                    </tr>
+        <tbody>
+            <% result.forEach(cat=> { %>
+                <tr>
+                    <td>
+                        <%= cat.number %>
+                    </td>
+                    <td>
+                        <%= cat.catname %>
+                    </td>
+                    <td>
+                        <%= cat.breed%>
+                    </td>
+                    <td>
+                        <%= cat.weight%>
+                    </td>
+                    <td>
+                        <%= cat.yearOfBirth %>
+                    </td>
+                </tr>
                 <% }) %>
-            </tbody>
+        </tbody>
         </table>
-        <a href="/"><button>Menu</button></a>
+        <a href="/"><button>Main Menu</button></a>
     </main>
-    
+
 </body>
+
 </html>

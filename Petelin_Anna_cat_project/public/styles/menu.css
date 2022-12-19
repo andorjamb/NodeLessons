@@ -1,10 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Laila&display=swap');
+
 body {
-    background-color: rgb(217,217,217);
+    font-family: 'Laila';
+    background-color: rgb(217, 217, 217);
     display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        'header header header'
+        'main main main'
+        'footer footer footer';
 }
 
-header{
-    width: 100vh;
+header {
+    width: 100vw;
     display: flex;
     justify-content: center;
 }
@@ -15,6 +24,20 @@ main {
 
 }
 
+.cat-img {
+    background-image: url('https://source.unsplash.com/500x400/?cat');
+}
+
 h1 {
     font-size: 3rem;
+}
+
+button {
+    border-radius: 20px;
+}
+
+footer {
+    min-height: 100px;
+    width: 100vw;
+    background-color: blue;
 }

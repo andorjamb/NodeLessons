@@ -1,17 +1,12 @@
-# Cat Project API Guide
+#Cat Server
 
-## Public API
+A Node Server application with EJS templating, completed as project work for Nodejs course at Helsinki Business College. 
 
-### dataStorageLayer.js
+To start the node server: 
 
-* function getAll()  -  returns array of all cats (or empty array)
+```
+node index.js
 
-* function getOne(cat.id)  - returns one cat object, by id (or: CAT_NOT_FOUND)
+```
 
-* function insert(newCat) - adds a new cat object to the array (return CAT_INSERTED or error code: CAT_NOT_INSERTED)
-
-* function update(updatedCat)  - modifies a cat object in the array (returns CAT_UPDATED or error code: CAT_NOT_UPDATED)
-
-* function remove(cat.id)  - removes a cat object from the array (returns CAT_REMOVED or error codes: CAT_NOT_FOUND or CAT_NOT_REMOVED)
-
-## Private API
+Application will run on port 3000 by default. 

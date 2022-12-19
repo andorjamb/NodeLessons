@@ -1,14 +1,53 @@
 //functions for data handling
 'use strict';
 
-const cats = require('../Petelin_Anna_cats.json')
+const { CODES, MESSAGES } = require('./statusCodes');
 
-function getAllCats() { }
+const {
+    getAllCatsFromStorage,
+    getCatFromStorage,
+    addCatToStorage,
+    updateCatStorage,
+    removeCatFromStorage
+} = require('./storageLayer');
 
-function getOneCat() { }
+module.exports = class Datastorage {
+    get CODES() {
+        return CODES;
+    }
 
-function insertCat() { }
+    getAllCats() {
+        return getAllCatsFromStorage();
+    }
 
-function updateCat() { }
+    getOneCat(number) {
+        return new Promise(async (resolve, reject) => {
+            if (!number) {
+                reject(MESSAGES.CAT_NOT_FOUND('(error: no number)'))
+            }
+            else {
+                const result = await getCatFromStorage(number);
+                if (result) {
+                    resolve(result);
+                }
+                else {
+                    reject(MESSAGES.CAT_NOT_FOUND(number))
+                }
+            }
+        })
 
-function removeCat() { }
+    }
+
+    addCat(cat) {
+
+    }
+
+    updateCat(cat) { }
+
+    removeCat(number) { }
+}
+
+
+
+
+
