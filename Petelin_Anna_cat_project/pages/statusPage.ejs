@@ -10,14 +10,20 @@
 </head>
 
 <body>
-    <main>
+    <header>
         <h1 class="<%= status.type %>">
             <%= header1 %>
         </h1>
-        <p class="<%= status.type %>">
-            <%= status.message %>
-        </p>
-        <a href="/"><button>Main Menu</button></a>
+    </header>
+    <main class="flex-container">
+
+        <div class="vertical-flex-container">
+            <p class="<%= status.type %> status">
+                <%= status.message %>
+            </p>
+
+            <a href="/"><button class="home-button">Main Menu</button></a>
+        </div>
     </main>
 </body>
 

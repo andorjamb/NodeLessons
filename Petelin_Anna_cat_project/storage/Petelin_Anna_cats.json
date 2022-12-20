@@ -61,5 +61,26 @@
         "breed": "raptor",
         "weightKg": 3,
         "yearOfBirth": 1996
+    },
+    {
+        "number": 11,
+        "name": "Fitz",
+        "breed": "minibreed",
+        "weightKg": 1,
+        "yearOfBirth": 2021
+    },
+    {
+        "number": 8,
+        "name": "Prince Edmund",
+        "breed": "aristocat",
+        "weightKg": 4,
+        "yearOfBirth": 2010
+    },
+    {
+        "number": 13,
+        "name": "Grimalkin",
+        "breed": "hocus",
+        "weightKg": 2,
+        "yearOfBirth": 2017
     }
 ]

@@ -92,7 +92,7 @@ app.post('/update', (req, res) => {
                 number: { value: cat.number, readonly: 'readonly' },
                 name: { value: cat.name, readonly: '' },
                 breed: { value: cat.breed, readonly: '' },
-                weighKg: { value: cat.weightKg, readonly: '' },
+                weightKg: { value: cat.weightKg, readonly: '' },
                 yearOfBirth: { value: cat.yearOfBirth, readonly: '' }
             })
         )
@@ -119,7 +119,7 @@ app.post('/removeCat', (req, res) => {
     if (!req.body) return res.sendStatus(500);
 
     const catNumber = req.body.number;
-    dataStorage.remove(catNumber)
+    dataStorage.removeCat(catNumber)
         .then(status => sendStatusPage(res, status))
         .catch(error => sendErrorPage(res, error));
 

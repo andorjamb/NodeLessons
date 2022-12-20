@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--Use for adding or modifying a cat-->
+<!--Use for adding or updating a cat-->
 <html lang="en">
 
 <head>
@@ -16,42 +16,39 @@
             <%= header1 %>
         </h1>
     </header>
-    <main>
-        <div class="vertical-flex-container">
-            <form class="vertical-flex-container" action="<%= action %>" method="POST">
+    <main class="vertical-flex-container">
 
-                <p>
-                    <label for="number">Number:</label>
-                    <input type="text" id="number" name="number" size="6" value="<%=  number.value %>"
-                        <%=number.readonly %> >
-                </p>
+        <form class="vertical-flex-container" action="<%= action %>" method="POST">
 
-                <p><label for="name">Name:</label>
-                    <input type="text" id="name" name="name" size="20" value="<%= name.value %>" <%=name.readonly %> >
-                </p>
+            <p>
+                <label for="number">Number:</label>
+                <input type="text" id="number" name="number" size="6" value="<%=  number.value %>" <%=number.readonly %>
+                >
+            </p>
 
-                <p><label for="breed">Breed:</label>
-                    <input type="text" id="breed" name="breed" size="25" value="<%= breed.value %>" <%=breed.readonly %>
-                    >
-                </p>
+            <p><label for="name">Name:</label>
+                <input type="text" id="name" name="name" size="20" value="<%= name.value %>" <%=name.readonly %> >
+            </p>
 
+            <p><label for="breed">Breed:</label>
+                <input type="text" id="breed" name="breed" size="25" value="<%= breed.value %>" <%=breed.readonly %> >
+            </p>
 
-                <p> <label for="weightKg">Weight (kg):</label>
-                    <input type="number" id="weightKg" name="weightKg" size="3" value="<%= weightKg.value %>"
-                        <%=weightKg.readonly %> >
-                </p>
+            <p><label for="weightKg">Weight</label>
+                <input type="text" id="weightKg" name="weightKg" size="5" value="<%= weightKg.value %>"
+                    <%=weightKg.readonly %> >
+            </p>
 
+            <p> <label for="yearOfBirth">Year of birth:</label>
+                <input type="text" id="yearOfBirth" name="yearOfBirth" size="10" value="<%= yearOfBirth.value %>"
+                    <%=yearOfBirth.readonly %> >
+            </p>
 
-                <p> <label for="yearOfBirth">Year of birth:</label>
-                    <input type="text" id="yearOfBirth" name="yearOfBirth" size="10" value="<%= yearOfBirth.value %>"
-                        <%=yearOfBirth.readonly %> >
-                </p>
+            <button class="submit" type="submit">Submit</button>
+        </form>
 
-                <button class="submit" type="submit">Submit</button>
-            </form>
+        <a href="/"><button class="home-button">Main Menu</button></a>
 
-            <a href="/"><button class="home-button">Main Menu</button></a>
-        </div>
     </main>
     <footer></footer>
 
