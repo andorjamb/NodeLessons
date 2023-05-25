@@ -11,3 +11,4 @@ function adapt(item){
 }
 
 module.exports={adapt}
+
